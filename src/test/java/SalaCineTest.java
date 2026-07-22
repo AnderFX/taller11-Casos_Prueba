@@ -47,7 +47,25 @@ public class SalaCineTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-
+     @Test
+    public void testAgregarAsiento2() {
+        System.out.println("agregarAsiento");
+        Asiento asiento = new Asiento("A3","VIP");
+        SalaCine instance2 = new SalaCine("Asiento-01",20);
+        instance2.agregarAsiento(asiento);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+    @Test
+    public void testAgregarAsiento3() {
+        System.out.println("agregarAsiento");
+        Asiento asiento = new Asiento("A3","ESTANDAR");
+        SalaCine instance3 = new SalaCine("Asiento-03",0);
+        instance3.agregarAsiento(asiento);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+ 
     /**
      * Test of buscarAsiento method, of class SalaCine.
      */
