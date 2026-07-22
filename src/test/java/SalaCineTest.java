@@ -40,7 +40,7 @@ public class SalaCineTest {
     }
 
     /**
-     * Test agregarAsiento method, class SalaCine.
+     * Test agregarAsiento method, clase SalaCine.
      */
     @Test
     public void testAgregarAsiento() {
@@ -80,7 +80,7 @@ public class SalaCineTest {
     }
 
     /**
-     * Test buscarAsiento method, class SalaCine.
+     * Test buscarAsiento method, clase SalaCine.
      */
     @Test
     public void testBuscarAsiento() {
