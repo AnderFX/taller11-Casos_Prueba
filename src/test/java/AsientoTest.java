@@ -3,6 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AsientoTest {
     Asiento asiento;
+    Asiento asiento1 = new Asiento("", "1");
 
     @BeforeAll
     public static void setUpClass() throws Exception {
@@ -27,6 +28,11 @@ class AsientoTest {
         assertFalse(asiento.isOcupado());
         assertEquals("A1",asiento.getCodigo());
     }
+    
+    void constructorValido_casoLimite(){
+        assertFalse(asiento1.isOcupado());
+        assertEquals("A1",asiento1.getCodigo());
+    }
 
     // TODO: Traducir los demás casos de su tabla a métodos @Test.
 
@@ -43,7 +49,40 @@ class AsientoTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+    
+    @Test
+    public void testCalcularPrecioBase_casoNormal() {
+        System.out.println("calcularPrecioBase");
+        Asiento instance = new Asiento("A1", "ESTANDAR");
+        double expResult = 5.0;
+        double result = instance.calcularPrecioBase();
+        assertEquals(expResult, result, 0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+    
+    @Test
+    public void testCalcularPrecioBase_casoLimite() {
+        System.out.println("calcularPrecioBase");
+        Asiento instance = new Asiento("A1", "EsTAndaR");;
+        double expResult = 0.0;
+        double result = instance.calcularPrecioBase();
+        assertEquals(expResult, result, 0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
 
+    @Test
+    public void testCalcularPrecioBase_casoError() {
+        System.out.println("calcularPrecioBase");
+        Asiento instance = new Asiento("A1", "");
+        double expResult = 0.0;
+        double result = instance.calcularPrecioBase();
+        assertEquals(expResult, result, 0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+    
     /**
      * Test of ocupar method, of class Asiento.
      */
